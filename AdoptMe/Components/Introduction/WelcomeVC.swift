@@ -41,6 +41,7 @@ class WelcomeVC: UIViewController {
             let dest = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             
             dest.modalPresentationStyle = .fullScreen
+			//Show login screen
             welcomeVC?.present(dest, animated: true, completion: nil)
         })
     }
