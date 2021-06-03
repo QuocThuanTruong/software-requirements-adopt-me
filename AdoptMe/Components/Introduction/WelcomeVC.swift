@@ -28,6 +28,7 @@ class WelcomeVC: UIViewController {
             let dest = storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
             
             dest.modalPresentationStyle = .fullScreen
+			//Show register screen
             welcomeVC?.present(dest, animated: true, completion: nil)
         })
     }
