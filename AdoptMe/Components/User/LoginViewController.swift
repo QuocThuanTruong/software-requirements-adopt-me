@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
 //            fillInfoVC?.present(dest, animated: true, completion: nil)
 //        })
     }
-    
+    // Login with current account
     func loginFirebase()  {
         let currentUser = Auth.auth().currentUser
         
@@ -139,7 +139,7 @@ class LoginViewController: UIViewController {
                 }
             }
     }
-    
+    // Login with facebook 
     @IBAction func loginWithFBAct(_ sender: Any) {
         let loginManager = LoginManager()
         loginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
