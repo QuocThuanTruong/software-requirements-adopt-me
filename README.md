@@ -144,7 +144,6 @@ Manage user profile and other setting in app.
 <img src="https://github.com/QuocThuanTruong/AdoptMe/blob/main/Img/Pro_2.png" width="310"/>
 <img src="https://github.com/QuocThuanTruong/AdoptMe/blob/main/Img/Pro_3.png" width="310"/>
 <img src="https://github.com/QuocThuanTruong/AdoptMe/blob/main/Img/Set_1.png" width="310"/>
- <img src="https://github.com/QuocThuanTruong/AdoptMe/blob/main/Img/Set_2.png" width="310"/>
 </div>
 
 <br/>
