@@ -224,7 +224,8 @@ class HomeViewController: UIViewController {
         tabLabels[index].textColor = UIColor(named: "AppSecondaryColor")
 
     }
-    
+
+    //Add pet to favorites
     @objc func addToFavorite(_ sender: Any) {
         let favButton = sender as? UIButton
         
@@ -259,7 +260,8 @@ class HomeViewController: UIViewController {
                 }
         }
     }
-    
+
+    //Filter pets by posting date, gender, age
     @IBAction func filterAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 538)
         
