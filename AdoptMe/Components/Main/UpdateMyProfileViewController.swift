@@ -74,6 +74,7 @@ class UpdateMyProfileViewController: UIViewController {
                 let urlStr = URL(string: (data?["avatar"] as! String))
                 let urlReq = URLRequest(url: urlStr!)
 
+                //user_avatar
                 let options = ImageLoadingOptions(
                   placeholder: UIImage(named: "user_avatar"),
                   transition: .fadeIn(duration: 0.5)
