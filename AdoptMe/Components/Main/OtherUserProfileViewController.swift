@@ -72,6 +72,7 @@ class OtherUserProfileViewController: UIViewController {
         
     }
     
+    //Khởi tạo view xem profile người dùng khác 
     func initView() {
         userAvatarImageView.layer.borderWidth = 0
         userAvatarImageView.layer.masksToBounds = false
