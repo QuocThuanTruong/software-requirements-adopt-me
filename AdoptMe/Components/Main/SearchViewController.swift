@@ -66,7 +66,8 @@ class SearchViewController: UIViewController {
                 
             }
     }
-    
+
+    //Khởi tạo view ban đầu 
     func initView() {
         searchTextField.text = Core.shared.getKeyName()
         searchTextField.setOutlineColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0), for: .normal)
