@@ -106,6 +106,7 @@ class AddPetViewController: UIViewController {
         
     }
     
+    //Pick Avatar for pet
     @IBAction func act_pickPetAvatar(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Attach Photo",
                                             message: "Where would you like to attach a photo from",

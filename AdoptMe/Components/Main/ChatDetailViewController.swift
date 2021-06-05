@@ -16,9 +16,7 @@ import CoreLocation
 import ALCameraViewController
 import Photos
 
-class ChatDetailViewController: MessagesViewController {
-
-    
+class ChatDetailViewController: MessagesViewController {    
     private var senderPhotoURL: URL?
     private var otherUserPhotoURL: URL?
 

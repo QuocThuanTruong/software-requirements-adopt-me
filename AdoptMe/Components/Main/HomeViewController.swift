@@ -517,6 +517,7 @@ class HomeViewController: UIViewController {
                         
                     }
                     
+                    //Chuẩn hóa key search về tiếng việt không dấu
                     if (keyName != "") {
                         self.sourcePets = self.sourcePets.filter { pet in
                             return pet.name

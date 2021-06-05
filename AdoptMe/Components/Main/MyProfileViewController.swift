@@ -121,8 +121,6 @@ class MyProfileViewController: UIViewController {
         
         listPetCollectionView.collectionViewLayout = layout
         listPetCollectionView.tag = 0
-        
-        
     }
     
     

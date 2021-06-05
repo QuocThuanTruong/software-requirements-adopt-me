@@ -186,13 +186,9 @@ class PetDetailViewController: UIViewController {
                         vc.modalPresentationStyle = .fullScreen
                         
                         strongSelf.present(vc, animated: true, completion: nil)
-                       
-                        
                     }
                 })
-            
-            }
-                 
+            } 
         }
     }
     
