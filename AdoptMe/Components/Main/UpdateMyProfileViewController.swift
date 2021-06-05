@@ -60,6 +60,7 @@ class UpdateMyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Format date: MMM dd, yyyy
         dateFormatter.dateFormat = "MMM dd, yyyy"
         
         genderPickerView = UIPickerView()
