@@ -41,6 +41,7 @@ class PetDetailViewController: UIViewController {
        initView()
     }
     
+	//Binding pet detail
     func initView() {
         favButton.layer.cornerRadius = 25.0
         adoptMeButton.layer.cornerRadius = 5.0
