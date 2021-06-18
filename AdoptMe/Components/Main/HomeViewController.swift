@@ -692,8 +692,6 @@ extension HomeViewController: UICollectionViewDataSource, CollectionViewWaterfal
 
                 } else {
                     cell.addFavButton.setImage(UIImage(named: "ic-sm-white-fav"), for: .normal)
-    
-                }
 
                 } else {
                     print("Document does not exist")
