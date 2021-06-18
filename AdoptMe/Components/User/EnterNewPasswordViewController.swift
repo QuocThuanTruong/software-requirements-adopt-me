@@ -11,6 +11,7 @@ import Firebase
 import BCrypt
 import SCLAlertView
 
+// Enter new password 
 class EnterNewPasswordViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: MDCOutlinedTextField!

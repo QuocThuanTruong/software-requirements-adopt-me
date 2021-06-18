@@ -64,7 +64,7 @@ class ForgotPasswordViewController: UIViewController {
         dummyPhoneTextField.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
     }
     
-
+	// Function send Act 
     @IBAction func sendAct(_ sender: Any) {
         VerifyAPI.sendVerificationCode(countryCode, phoneNumber)
         
@@ -75,7 +75,7 @@ class ForgotPasswordViewController: UIViewController {
             
             vc.countryCode = self.countryCode
             vc.phoneNumber = self.phoneNumber
-            
+            // Show API screen
             vc.modalPresentationStyle = .fullScreen
             current?.present(vc, animated: true, completion: nil)
         })
@@ -105,7 +105,7 @@ extension ForgotPasswordViewController: FPNTextFieldDelegate {
     countryCode = dialCode
 }
 
-  
+   
    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
       if isValid {
         phoneNumber = textField.getRawPhoneNumber()!       // Output "600000001"
