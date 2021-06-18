@@ -41,6 +41,7 @@ class PetDetailViewController: UIViewController {
        initView()
     }
     
+	//Binding pet detail
     func initView() {
         favButton.layer.cornerRadius = 25.0
         adoptMeButton.layer.cornerRadius = 5.0
@@ -117,6 +118,7 @@ class PetDetailViewController: UIViewController {
         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
     }
     
+	//View profile
     @IBAction func viewProfileAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OtherUserProfileViewController") as! OtherUserProfileViewController
         

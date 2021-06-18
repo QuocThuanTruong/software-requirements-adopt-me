@@ -260,8 +260,9 @@ class HomeViewController: UIViewController {
                 }
         }
     }
+    
+	//Filter pet with sort, age, gender
 
-    //Filter pets by posting date, gender, age
     @IBAction func filterAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 538)
         
