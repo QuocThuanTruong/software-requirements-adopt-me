@@ -756,6 +756,7 @@ class AddPetViewController: UIViewController {
     }
     
     @IBAction func resetAct(_ sender: Any) {
+        //reset form
         petNameTextField.text = ""
         petAgeTextField.text = ""
         petGenderTextField.text = ""
