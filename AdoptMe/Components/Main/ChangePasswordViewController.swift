@@ -2,7 +2,7 @@
 //  ChangePasswordViewController.swift
 //  AdoptMe
 //
-//  Created by Quoc Thuan Truong on 1/21/21.
+//  
 //
 
 import UIKit
@@ -49,7 +49,7 @@ class ChangePasswordViewController: UIViewController {
         }
     }
     
-
+	//Change action
     @IBAction func changeAct(_ sender: Any) {
         let password = oldPasswordTextField.text ?? ""
         var newPassword = newPasswordTextField.text ?? ""
