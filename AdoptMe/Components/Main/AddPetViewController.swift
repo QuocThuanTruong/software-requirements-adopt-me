@@ -764,6 +764,7 @@ class AddPetViewController: UIViewController {
         petDescriptionTextView.text = ""
         petTypeTextField.text = ""
         
+        //Add image picker default
         avatarPickerButton.setImage(UIImage(named: "ic-md-blue-imgpicker"), for: .normal)
         petImage1Button.setImage(UIImage(named: "ic-md-blue-imgpicker"), for: .normal)
         petImage2Button.setImage(UIImage(named: "ic-md-blue-imgpicker"), for: .normal)
