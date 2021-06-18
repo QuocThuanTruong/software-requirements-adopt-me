@@ -2,7 +2,7 @@
 //  PetModel.swift
 //  AdoptMe
 //
-//  Created by lnt on 1/19/21.
+//  
 //
 
 import Foundation
