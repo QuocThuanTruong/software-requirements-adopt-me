@@ -118,6 +118,7 @@ class PetDetailViewController: UIViewController {
         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
     }
     
+	//View profile
     @IBAction func viewProfileAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OtherUserProfileViewController") as! OtherUserProfileViewController
         
