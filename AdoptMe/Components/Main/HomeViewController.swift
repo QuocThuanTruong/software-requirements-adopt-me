@@ -577,6 +577,7 @@ class HomeViewController: UIViewController {
                         return pet.type == self.listPetCollectionView.tag
                     }
                     
+                    //fix bug filter by age
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.age >= minAgeSelected && pet.age <= maxAgeSelected
                     }
@@ -589,6 +590,7 @@ class HomeViewController: UIViewController {
                         }
                     }
                     
+                    //search with VNese key
                     if (keyName != "") {
                         self.sourcePets = self.sourcePets.filter { pet in
                             return pet.name
