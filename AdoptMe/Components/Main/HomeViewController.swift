@@ -562,11 +562,12 @@ class HomeViewController: UIViewController {
                         return
                     }
                     
-                    
+                   
                     self.sourcePets = documents.compactMap { (QueryDocumentSnapshot) -> Pet? in
                       return try? QueryDocumentSnapshot.data(as: Pet.self)
                     }
                     
+                     //fix bug filter by gender
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.is_active == 1
                     }
