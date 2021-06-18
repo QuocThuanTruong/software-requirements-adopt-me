@@ -621,14 +621,14 @@ class HomeViewController: UIViewController {
                     } else {
                         self.listPetCollectionView.reloadData()
                     }
-                    
-                    
                 }
         }
     }
     
     @IBAction func logout_act(_ sender: Any) {
         let token = Core.shared.getToken()
+        
+        //set empty token
         Core.shared.setToken("")
         
         let userCollection = Firestore.firestore().collection("users")
