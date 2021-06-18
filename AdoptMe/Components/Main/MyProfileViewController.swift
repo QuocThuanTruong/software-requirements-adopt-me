@@ -46,6 +46,7 @@ class MyProfileViewController: UIViewController {
         fetchData()
     }
     
+    //Lấy dữ liệu về thú cưng của người dùng
     func fetchData() {
         db.collection("pets").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
@@ -70,6 +71,7 @@ class MyProfileViewController: UIViewController {
         
     }
     
+    //Khởi tạo view đầu tiêu
     func initView() {
         userAvatarImageView.layer.borderWidth = 0
         userAvatarImageView.layer.masksToBounds = false
@@ -119,8 +121,6 @@ class MyProfileViewController: UIViewController {
         
         listPetCollectionView.collectionViewLayout = layout
         listPetCollectionView.tag = 0
-        
-        
     }
     
     
@@ -179,6 +179,7 @@ class MyProfileViewController: UIViewController {
     
 }
 
+//View Profile User
 extension MyProfileViewController: UICollectionViewDataSource, CollectionViewWaterfallLayoutDelegate  {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

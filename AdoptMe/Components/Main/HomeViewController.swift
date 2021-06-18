@@ -224,7 +224,8 @@ class HomeViewController: UIViewController {
         tabLabels[index].textColor = UIColor(named: "AppSecondaryColor")
 
     }
-    
+
+    //Add pet to favorites
     @objc func addToFavorite(_ sender: Any) {
         let favButton = sender as? UIButton
         
@@ -261,6 +262,7 @@ class HomeViewController: UIViewController {
     }
     
 	//Filter pet with sort, age, gender
+
     @IBAction func filterAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 538)
         
@@ -414,7 +416,8 @@ class HomeViewController: UIViewController {
         dest.modalPresentationStyle = .fullScreen
         self.present(dest, animated: true, completion: nil)
     }
-    
+
+    //Show all pets
     @IBAction func viewAllPetAct(_ sender: Any) {
         setTabSelected(0)
         
@@ -422,7 +425,8 @@ class HomeViewController: UIViewController {
         
         reloadPage()
     }
-    
+
+    //Only show dogs
     @IBAction func viewDogsAct(_ sender: Any) {
         setTabSelected(1)
         
@@ -431,7 +435,8 @@ class HomeViewController: UIViewController {
         
         reloadPage()
     }
-    
+
+    //Only show cats
     @IBAction func viewCatsAct(_ sender: Any) {
         setTabSelected(2)
         
@@ -439,7 +444,8 @@ class HomeViewController: UIViewController {
         print("2")
         reloadPage()
     }
-    
+
+    //Show other pets
     @IBAction func viewOthersAct(_ sender: Any) {
         setTabSelected(3)
         
@@ -512,6 +518,7 @@ class HomeViewController: UIViewController {
                         
                     }
                     
+                    //Chuẩn hóa key search về tiếng việt không dấu
                     if (keyName != "") {
                         self.sourcePets = self.sourcePets.filter { pet in
                             return pet.name

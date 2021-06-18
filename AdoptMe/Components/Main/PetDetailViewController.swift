@@ -128,7 +128,8 @@ class PetDetailViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
         
     }
-    
+
+    //Pet adoption: Switch from pet details screen to chat screen
     @IBAction func adoptMeAct(_ sender: Any) {
         db.collection("users").document(pet.user_id).getDocument { (document, error) in
             let data = document?.data()
@@ -187,13 +188,9 @@ class PetDetailViewController: UIViewController {
                         vc.modalPresentationStyle = .fullScreen
                         
                         strongSelf.present(vc, animated: true, completion: nil)
-                       
-                        
                     }
                 })
-            
-            }
-                 
+            } 
         }
     }
     
