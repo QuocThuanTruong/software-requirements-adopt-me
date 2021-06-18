@@ -133,7 +133,6 @@ class PetDetailViewController: UIViewController {
         db.collection("users").document(pet.user_id).getDocument { (document, error) in
             let data = document?.data()
             
-            //Day nha bro
             let name = (data?["fullname"] as! String)
             var email = (data?["email"] as! String)
             
