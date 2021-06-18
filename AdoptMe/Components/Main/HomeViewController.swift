@@ -101,6 +101,7 @@ class HomeViewController: UIViewController {
         reloadPage()
     }
     
+    //fetch all pet
     func fetchData() {
         //All
         db.collection("pets").addSnapshotListener { (querySnapshot, error) in
