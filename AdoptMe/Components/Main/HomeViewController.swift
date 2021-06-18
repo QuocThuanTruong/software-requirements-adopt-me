@@ -572,6 +572,7 @@ class HomeViewController: UIViewController {
                         return pet.is_active == 1
                     }
                     
+                     //fix bug filter by pet category
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.type == self.listPetCollectionView.tag
                     }
