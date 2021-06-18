@@ -47,7 +47,7 @@ class ForgotPasswordViewController: UIViewController {
         backButton.layer.cornerRadius = 5.0
         backButton.layer.borderColor = UIColor(named: "AppRedColor")?.cgColor
         
-        
+        //setup send OTP code to user's phone (only VN)
         phoneTextField.setFlag(key: .VN)
         countryCode = "+84"
         phoneTextField.delegate = self
