@@ -737,9 +737,7 @@ extension HomeViewController: UICollectionViewDataSource, CollectionViewWaterfal
                 cell.postedDateLabel.text = "Posted: \(minutes) minutes ago"
             }
         }
-    
-        
-        
+
         cell.petAvatarImage.layer.cornerRadius = 16
         cell.petAvatarImage.clipsToBounds = true
         

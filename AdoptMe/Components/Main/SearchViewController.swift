@@ -41,6 +41,7 @@ class SearchViewController: UIViewController {
     }
     
     func fetchData() {
+    //top 3 last added
         db.collection("pets")
             .order(by: "posted_date", descending: true)
             .addSnapshotListener { (querySnapshot, error) in
