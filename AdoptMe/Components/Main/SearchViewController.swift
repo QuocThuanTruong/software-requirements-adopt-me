@@ -57,7 +57,8 @@ class SearchViewController: UIViewController {
                 self.pets = self.pets.filter { pet in
                     return pet.is_active == 1
                 }
-                
+
+                //fix bug last added <= 3
                 let n =  self.pets.count
                 if (n >= 3) {
                     self.pets = Array(self.pets[0..<3])
