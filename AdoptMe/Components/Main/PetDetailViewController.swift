@@ -149,7 +149,6 @@ class PetDetailViewController: UIViewController {
                     alertView.dismiss(animated: true, completion: nil)
                 })
                 
-                    
                 alertView.showWarning("Warning", subTitle: "You can not chat with your self")
                 
             } else {
@@ -208,6 +207,7 @@ class PetDetailViewController: UIViewController {
         }
     }
     
+    // Add pet to favorite
     @IBAction func addFavAct(_ sender: Any) {
         let favButton = sender as? UIButton
         
