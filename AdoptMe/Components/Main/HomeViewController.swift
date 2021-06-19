@@ -101,6 +101,7 @@ class HomeViewController: UIViewController {
         reloadPage()
     }
     
+    //fetch all pet
     func fetchData() {
         //All
         db.collection("pets").addSnapshotListener { (querySnapshot, error) in
@@ -562,19 +563,22 @@ class HomeViewController: UIViewController {
                         return
                     }
                     
-                    
+                   
                     self.sourcePets = documents.compactMap { (QueryDocumentSnapshot) -> Pet? in
                       return try? QueryDocumentSnapshot.data(as: Pet.self)
                     }
                     
+                     //fix bug filter by gender
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.is_active == 1
                     }
                     
+                     //fix bug filter by pet category
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.type == self.listPetCollectionView.tag
                     }
                     
+                    //fix bug filter by age
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.age >= minAgeSelected && pet.age <= maxAgeSelected
                     }
@@ -587,6 +591,7 @@ class HomeViewController: UIViewController {
                         }
                     }
                     
+                    //search with VNese key
                     if (keyName != "") {
                         self.sourcePets = self.sourcePets.filter { pet in
                             return pet.name
@@ -617,14 +622,14 @@ class HomeViewController: UIViewController {
                     } else {
                         self.listPetCollectionView.reloadData()
                     }
-                    
-                    
                 }
         }
     }
     
     @IBAction func logout_act(_ sender: Any) {
         let token = Core.shared.getToken()
+        
+        //set empty token
         Core.shared.setToken("")
         
         let userCollection = Firestore.firestore().collection("users")
@@ -688,8 +693,6 @@ extension HomeViewController: UICollectionViewDataSource, CollectionViewWaterfal
 
                 } else {
                     cell.addFavButton.setImage(UIImage(named: "ic-sm-white-fav"), for: .normal)
-    
-                }
 
                 } else {
                     print("Document does not exist")
@@ -735,9 +738,7 @@ extension HomeViewController: UICollectionViewDataSource, CollectionViewWaterfal
                 cell.postedDateLabel.text = "Posted: \(minutes) minutes ago"
             }
         }
-    
-        
-        
+
         cell.petAvatarImage.layer.cornerRadius = 16
         cell.petAvatarImage.clipsToBounds = true
         

@@ -181,6 +181,7 @@ class LoginViewController: UIViewController {
         
         let userCollection = Firestore.firestore().collection("users")
 
+        //check login by username and password
         userCollection.whereField("username", isEqualTo: username).limit(to: 1)
             .getDocuments{ [self](querySnapshot, error) in
                 if let error = error {
