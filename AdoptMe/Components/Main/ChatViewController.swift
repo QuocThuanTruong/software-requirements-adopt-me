@@ -22,7 +22,7 @@ class ChatViewController: UIViewController {
         
     }
     
-
+    // Delete chat
     @IBAction func deleteAct(_ sender: Any) {
         if chatTableView.isEditing {
             chatTableView.isEditing = false
