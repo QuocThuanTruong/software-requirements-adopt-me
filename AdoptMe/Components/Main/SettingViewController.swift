@@ -31,6 +31,7 @@ class SettingViewController: UIViewController {
         
     }
     
+    // Change password
     @IBAction func changePasswordAct(_ sender: Any) {
         db.collection("users").document(Core.shared.getCurrentUserID()).getDocument {(document, error) in
             if let document = document, document.exists {
