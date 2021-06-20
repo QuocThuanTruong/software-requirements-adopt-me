@@ -171,6 +171,7 @@ class UpdateMyProfileViewController: UIViewController {
         }
     }
     
+    // Chosse date of birth
     @IBAction func datePickerAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 370)
         let title = UILabel()
@@ -248,7 +249,7 @@ class UpdateMyProfileViewController: UIViewController {
         
     }
     
-    
+    // Choose gender
     @IBAction func genderPickerAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 308)
         let title = UILabel()
@@ -320,6 +321,7 @@ class UpdateMyProfileViewController: UIViewController {
         self.present(bottomPopUpView, animated: true, completion: nil)
     }
     
+    // Choose avatar
     @IBAction func avtPickerAct(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Attach Photo",
                                             message: "Where would you like to attach a photo from",
@@ -570,6 +572,7 @@ class UpdateMyProfileViewController: UIViewController {
         }
     }
     
+    // Check email
     func isValidEmail(email: String?) -> Bool {
         guard email != nil else { return false }
         
