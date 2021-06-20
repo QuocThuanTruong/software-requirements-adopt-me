@@ -40,6 +40,7 @@ class SearchViewController: UIViewController {
         })
     }
     
+	// Add func fetchData
     func fetchData() {
         db.collection("pets")
             .order(by: "posted_date", descending: true)
@@ -110,7 +111,7 @@ class SearchViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    // Add func act_ClearAll
     @IBAction func act_ClearAll(_ sender: Any) {
         Core.shared.clearSearchHistory()
         searchKeyHistory = Core.shared.getKeySearchHistory()
@@ -118,6 +119,7 @@ class SearchViewController: UIViewController {
         historyTableView.reloadData()
     }
     
+	// Add func act_ClearKey
     @IBAction func act_ClearKey(_ sender: Any) {
         let button = sender as! UIButton
         
