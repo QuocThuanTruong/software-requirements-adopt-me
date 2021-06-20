@@ -59,6 +59,7 @@ class UserViewController: UIViewController {
         
     }
     
+    // View profile
     @IBAction func viewMyProfileAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyProfileViewController") as! MyProfileViewController
         
@@ -66,6 +67,7 @@ class UserViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    // View app information
     @IBAction func appInfoAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AppInfoViewController") as! AppInfoViewController
         
@@ -85,6 +87,7 @@ class UserViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    // Edit profile
     @IBAction func editProfileAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "UpdateMyProfileViewController") as! UpdateMyProfileViewController
         
@@ -128,6 +131,7 @@ class UserViewController: UIViewController {
             }
     }
     
+    // Log out
     @IBAction func logOutAct(_ sender: Any) {
         let appearance = SCLAlertView.SCLAppearance(
             kButtonFont: UIFont(name: "HelveticaNeue", size: 17)!,
