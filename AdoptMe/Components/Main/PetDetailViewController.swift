@@ -196,6 +196,7 @@ class PetDetailViewController: UIViewController {
         }
     }
     
+	// Add func phoneAct
     @IBAction func phoneAct(_ sender: Any) {
         db.collection("users").document(pet.user_id).getDocument { (document, error) in
             let data = document?.data()
@@ -210,6 +211,7 @@ class PetDetailViewController: UIViewController {
         }
     }
     
+	// Add func addFavAct
     @IBAction func addFavAct(_ sender: Any) {
         let favButton = sender as? UIButton
         
