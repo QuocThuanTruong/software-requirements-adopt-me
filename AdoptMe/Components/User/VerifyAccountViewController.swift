@@ -47,7 +47,7 @@ class VerifyAccountViewController: UIViewController {
         backButton.layer.borderColor = UIColor(named: "AppRedColor")?.cgColor
     }
     
-
+    // Resend code OTP
     @IBAction func resendAct(_ sender: Any) {
         VerifyAPI.sendVerificationCode(countryCode, phoneNumber)
         
@@ -62,6 +62,7 @@ class VerifyAccountViewController: UIViewController {
         
     }
     
+    // Verify account
     @IBAction func verifyAct(_ sender: Any) {
         if let code = otpCode {
                     VerifyAPI.validateVerificationCode(self.countryCode, self.phoneNumber, code) { checked in
