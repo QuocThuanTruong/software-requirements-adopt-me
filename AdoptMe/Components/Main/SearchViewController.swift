@@ -40,6 +40,7 @@ class SearchViewController: UIViewController {
         })
     }
     
+    // Load all pet
     func fetchData() {
     //top 3 last added
         db.collection("pets")
@@ -92,6 +93,7 @@ class SearchViewController: UIViewController {
         recentPetCollectionView.dataSource = recentPetDelegate
     }
     
+    // Serch pet
     @IBAction func searchAct(_ sender: Any) {
         let key = searchTextField.text ?? ""
         
@@ -112,7 +114,7 @@ class SearchViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    // Delete all history
     @IBAction func act_ClearAll(_ sender: Any) {
         Core.shared.clearSearchHistory()
         searchKeyHistory = Core.shared.getKeySearchHistory()
@@ -120,6 +122,7 @@ class SearchViewController: UIViewController {
         historyTableView.reloadData()
     }
     
+    // Delete history
     @IBAction func act_ClearKey(_ sender: Any) {
         let button = sender as! UIButton
         
