@@ -45,7 +45,7 @@ class MyProfileViewController: UIViewController {
         
         fetchData()
     }
-    
+    // Add func fetchData
     func fetchData() {
         db.collection("pets").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
@@ -70,6 +70,7 @@ class MyProfileViewController: UIViewController {
         
     }
     
+	// Add fun initView
     func initView() {
         userAvatarImageView.layer.borderWidth = 0
         userAvatarImageView.layer.masksToBounds = false
@@ -123,7 +124,7 @@ class MyProfileViewController: UIViewController {
         
     }
     
-    
+    // Add func editProfileAct
     @IBAction func editProfileAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "UpdateMyProfileViewController") as! UpdateMyProfileViewController
         
@@ -131,10 +132,12 @@ class MyProfileViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+	// Add func backAct
     @IBAction func backAct(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+	// Add func deleteAct
     @objc func deletePetAct(_ sender: Any) {
         let deleteButton = sender as? UIButton
         
@@ -146,6 +149,7 @@ class MyProfileViewController: UIViewController {
        fetchData()
     }
     
+	// Add func addToFavorite
     @objc func addToFavorite(_ sender: Any) {
         let favButton = sender as? UIButton
         
