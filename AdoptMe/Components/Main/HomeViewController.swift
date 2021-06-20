@@ -263,7 +263,6 @@ class HomeViewController: UIViewController {
     }
     
 	//Filter pet with sort, age, gender
-
     @IBAction func filterAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 538)
         
@@ -411,6 +410,7 @@ class HomeViewController: UIViewController {
         
     }
     
+    // Search pet
     @IBAction func searchAct(_ sender: Any) {
         let dest = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         
