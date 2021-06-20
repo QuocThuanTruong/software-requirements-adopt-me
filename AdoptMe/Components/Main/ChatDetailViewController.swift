@@ -161,7 +161,8 @@ class ChatDetailViewController: MessagesViewController {
 
            present(actionSheet, animated: true)
        }
-
+	
+	// Add func presentLocationPicker
     private func presentLocationPicker() {
           let vc = LocationPickerViewController(coordinates: nil)
         vc.modalPresentationStyle = .fullScreen
