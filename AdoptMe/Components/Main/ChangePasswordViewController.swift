@@ -197,6 +197,7 @@ class ChangePasswordViewController: UIViewController {
         }
     }
     
+	// Add func isValidPassword
     func isValidPassword(testStr:String?) -> Bool {
         guard testStr != nil else { return false }
      
