@@ -67,7 +67,7 @@ class ChatViewController: UIViewController {
                 }
             })
         }
-    
+    // create new consersation with other user 
     func createNewConversation(userFullName: String, userEmail: String) {
             let name = userFullName
             let email = ChatDatabaseManager.safeEmail(emailAddress: userEmail)
