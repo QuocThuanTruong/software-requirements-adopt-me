@@ -93,6 +93,7 @@ class SearchViewController: UIViewController {
         recentPetCollectionView.dataSource = recentPetDelegate
     }
     
+	// search action
     @IBAction func searchAct(_ sender: Any) {
         let key = searchTextField.text ?? ""
         
