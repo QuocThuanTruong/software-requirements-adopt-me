@@ -193,6 +193,7 @@ class PetDetailViewController: UIViewController {
         }
     }
     
+	// add phone act into phoneButton
     @IBAction func phoneAct(_ sender: Any) {
         db.collection("users").document(pet.user_id).getDocument { (document, error) in
             let data = document?.data()
