@@ -113,7 +113,7 @@ class SearchViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    // clear all history
     @IBAction func act_ClearAll(_ sender: Any) {
         Core.shared.clearSearchHistory()
         searchKeyHistory = Core.shared.getKeySearchHistory()
@@ -121,6 +121,7 @@ class SearchViewController: UIViewController {
         historyTableView.reloadData()
     }
     
+	// clear only history searchkey 
     @IBAction func act_ClearKey(_ sender: Any) {
         let button = sender as! UIButton
         
