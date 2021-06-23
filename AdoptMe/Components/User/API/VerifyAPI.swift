@@ -82,7 +82,8 @@ struct VerifyAPI {
         }
         task.resume()
     }
-
+	
+	// sendVerificationCode func 
     static func sendVerificationCode(_ countryCode: String, _ phoneNumber: String) {
         let parameters = [
             "via": "sms",
