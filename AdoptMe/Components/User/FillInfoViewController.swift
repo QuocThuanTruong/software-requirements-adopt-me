@@ -86,6 +86,7 @@ class FillInfoViewController: UIViewController {
         
     }
     
+    // Choose the date of birth for the user
     @IBAction func datePickerAct(_ sender: Any) {
 
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 370)
@@ -164,7 +165,7 @@ class FillInfoViewController: UIViewController {
         
     }
     
-    
+    // Select the user's gender
     @IBAction func genderPickerAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 308)
         let title = UILabel()
@@ -236,6 +237,7 @@ class FillInfoViewController: UIViewController {
         self.present(bottomPopUpView, animated: true, completion: nil)
     }
     
+    // Select the user's avatar
     @IBAction func avtPickerAct(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Attach Photo",
                                             message: "Where would you like to attach a photo from",
@@ -381,6 +383,7 @@ class FillInfoViewController: UIViewController {
         })
     }
     
+    // Check email
     func isValidEmail(email: String?) -> Bool {
         guard email != nil else { return false }
         
@@ -390,6 +393,7 @@ class FillInfoViewController: UIViewController {
         return pred.evaluate(with: email)
     }
     
+    // Finish
     @IBAction func finishFillInfo(_ sender: Any) {
         checkForm()
         
@@ -524,7 +528,7 @@ class FillInfoViewController: UIViewController {
         bottomPopUpView.dismiss(animated: true, completion: nil)
     }
     
-    
+    // Back
     @IBAction func backAct(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

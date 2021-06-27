@@ -41,6 +41,7 @@ class PetDetailViewController: UIViewController {
        initView()
     }
     
+	//Binding pet detail
     func initView() {
         favButton.layer.cornerRadius = 25.0
         adoptMeButton.layer.cornerRadius = 5.0
@@ -117,6 +118,7 @@ class PetDetailViewController: UIViewController {
         fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .medium, color: nil)
     }
     
+	//View profile
     @IBAction func viewProfileAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OtherUserProfileViewController") as! OtherUserProfileViewController
         
@@ -126,12 +128,12 @@ class PetDetailViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
         
     }
-    
+
+    //Pet adoption: Switch from pet details screen to chat screen
     @IBAction func adoptMeAct(_ sender: Any) {
         db.collection("users").document(pet.user_id).getDocument { (document, error) in
             let data = document?.data()
             
-            //Day nha bro
             let name = (data?["fullname"] as! String)
             var email = (data?["email"] as! String)
             
@@ -147,7 +149,6 @@ class PetDetailViewController: UIViewController {
                     alertView.dismiss(animated: true, completion: nil)
                 })
                 
-                    
                 alertView.showWarning("Warning", subTitle: "You can not chat with your self")
                 
             } else {
@@ -186,17 +187,15 @@ class PetDetailViewController: UIViewController {
                         vc.modalPresentationStyle = .fullScreen
                         
                         strongSelf.present(vc, animated: true, completion: nil)
-                       
-                        
                     }
                 })
-            
-            }
-                 
+            } 
         }
     }
     
+
 	// Add func phoneAct
+	// add phone act into phoneButton
     @IBAction func phoneAct(_ sender: Any) {
         db.collection("users").document(pet.user_id).getDocument { (document, error) in
             let data = document?.data()
@@ -210,8 +209,11 @@ class PetDetailViewController: UIViewController {
             }
         }
     }
-    
+
 	// Add func addFavAct
+
+    // Add pet to favorite
+
     @IBAction func addFavAct(_ sender: Any) {
         let favButton = sender as? UIButton
         

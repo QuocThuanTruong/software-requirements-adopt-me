@@ -106,6 +106,7 @@ class AddPetViewController: UIViewController {
         
     }
     
+    //Pick Avatar for pet
     @IBAction func act_pickPetAvatar(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Attach Photo",
                                             message: "Where would you like to attach a photo from",
@@ -755,6 +756,7 @@ class AddPetViewController: UIViewController {
     }
     
     @IBAction func resetAct(_ sender: Any) {
+        //reset form
         petNameTextField.text = ""
         petAgeTextField.text = ""
         petGenderTextField.text = ""
@@ -762,6 +764,7 @@ class AddPetViewController: UIViewController {
         petDescriptionTextView.text = ""
         petTypeTextField.text = ""
         
+        //Add image picker default
         avatarPickerButton.setImage(UIImage(named: "ic-md-blue-imgpicker"), for: .normal)
         petImage1Button.setImage(UIImage(named: "ic-md-blue-imgpicker"), for: .normal)
         petImage2Button.setImage(UIImage(named: "ic-md-blue-imgpicker"), for: .normal)

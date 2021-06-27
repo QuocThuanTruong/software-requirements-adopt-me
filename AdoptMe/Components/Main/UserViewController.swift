@@ -46,7 +46,7 @@ class UserViewController: UIViewController {
                   transition: .fadeIn(duration: 0.5)
                 )
 
-                
+                //load user avatar
                 Nuke.loadImage(with: urlReq, options: options, into: self.userAvatarImageView)
                 
                 } else {

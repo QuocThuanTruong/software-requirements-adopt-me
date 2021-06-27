@@ -22,7 +22,7 @@ class ChatViewController: UIViewController {
         
     }
     
-
+	// delete conversation 
     @IBAction func deleteAct(_ sender: Any) {
         if chatTableView.isEditing {
             chatTableView.isEditing = false
@@ -67,7 +67,7 @@ class ChatViewController: UIViewController {
                 }
             })
         }
-    
+    // create new consersation with other user 
     func createNewConversation(userFullName: String, userEmail: String) {
             let name = userFullName
             let email = ChatDatabaseManager.safeEmail(emailAddress: userEmail)

@@ -101,6 +101,7 @@ class HomeViewController: UIViewController {
         reloadPage()
     }
     
+    //fetch all pet
     func fetchData() {
         //All
         db.collection("pets").addSnapshotListener { (querySnapshot, error) in
@@ -224,7 +225,8 @@ class HomeViewController: UIViewController {
         tabLabels[index].textColor = UIColor(named: "AppSecondaryColor")
 
     }
-    
+
+    //Add pet to favorites
     @objc func addToFavorite(_ sender: Any) {
         let favButton = sender as? UIButton
         
@@ -260,6 +262,8 @@ class HomeViewController: UIViewController {
         }
     }
     
+	//Filter pet with sort, age, gender
+
     @IBAction func filterAct(_ sender: Any) {
         bottomPopUpView = BottomPopUpView(wrapperContentHeight: 538)
         
@@ -413,7 +417,8 @@ class HomeViewController: UIViewController {
         dest.modalPresentationStyle = .fullScreen
         self.present(dest, animated: true, completion: nil)
     }
-    
+
+    //Show all pets
     @IBAction func viewAllPetAct(_ sender: Any) {
         setTabSelected(0)
         
@@ -421,7 +426,8 @@ class HomeViewController: UIViewController {
         
         reloadPage()
     }
-    
+
+    //Only show dogs
     @IBAction func viewDogsAct(_ sender: Any) {
         setTabSelected(1)
         
@@ -430,7 +436,8 @@ class HomeViewController: UIViewController {
         
         reloadPage()
     }
-    
+
+    //Only show cats
     @IBAction func viewCatsAct(_ sender: Any) {
         setTabSelected(2)
         
@@ -438,7 +445,8 @@ class HomeViewController: UIViewController {
         print("2")
         reloadPage()
     }
-    
+
+    //Show other pets
     @IBAction func viewOthersAct(_ sender: Any) {
         setTabSelected(3)
         
@@ -511,6 +519,7 @@ class HomeViewController: UIViewController {
                         
                     }
                     
+                    //Chuẩn hóa key search về tiếng việt không dấu
                     if (keyName != "") {
                         self.sourcePets = self.sourcePets.filter { pet in
                             return pet.name
@@ -554,19 +563,22 @@ class HomeViewController: UIViewController {
                         return
                     }
                     
-                    
+                   
                     self.sourcePets = documents.compactMap { (QueryDocumentSnapshot) -> Pet? in
                       return try? QueryDocumentSnapshot.data(as: Pet.self)
                     }
                     
+                     //fix bug filter by gender
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.is_active == 1
                     }
                     
+                     //fix bug filter by pet category
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.type == self.listPetCollectionView.tag
                     }
                     
+                    //fix bug filter by age
                     self.sourcePets = self.sourcePets.filter { pet in
                         return pet.age >= minAgeSelected && pet.age <= maxAgeSelected
                     }
@@ -579,6 +591,7 @@ class HomeViewController: UIViewController {
                         }
                     }
                     
+                    //search with VNese key
                     if (keyName != "") {
                         self.sourcePets = self.sourcePets.filter { pet in
                             return pet.name
@@ -609,14 +622,14 @@ class HomeViewController: UIViewController {
                     } else {
                         self.listPetCollectionView.reloadData()
                     }
-                    
-                    
                 }
         }
     }
     
     @IBAction func logout_act(_ sender: Any) {
         let token = Core.shared.getToken()
+        
+        //set empty token
         Core.shared.setToken("")
         
         let userCollection = Firestore.firestore().collection("users")
@@ -680,8 +693,6 @@ extension HomeViewController: UICollectionViewDataSource, CollectionViewWaterfal
 
                 } else {
                     cell.addFavButton.setImage(UIImage(named: "ic-sm-white-fav"), for: .normal)
-    
-                }
 
                 } else {
                     print("Document does not exist")
@@ -727,9 +738,7 @@ extension HomeViewController: UICollectionViewDataSource, CollectionViewWaterfal
                 cell.postedDateLabel.text = "Posted: \(minutes) minutes ago"
             }
         }
-    
-        
-        
+
         cell.petAvatarImage.layer.cornerRadius = 16
         cell.petAvatarImage.clipsToBounds = true
         

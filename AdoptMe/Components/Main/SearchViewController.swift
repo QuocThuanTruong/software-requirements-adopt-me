@@ -42,6 +42,7 @@ class SearchViewController: UIViewController {
     
 	// Add func fetchData
     func fetchData() {
+    //top 3 last added
         db.collection("pets")
             .order(by: "posted_date", descending: true)
             .addSnapshotListener { (querySnapshot, error) in
@@ -57,7 +58,8 @@ class SearchViewController: UIViewController {
                 self.pets = self.pets.filter { pet in
                     return pet.is_active == 1
                 }
-                
+
+                //fix bug last added <= 3
                 let n =  self.pets.count
                 if (n >= 3) {
                     self.pets = Array(self.pets[0..<3])
@@ -67,7 +69,8 @@ class SearchViewController: UIViewController {
                 
             }
     }
-    
+
+    //Khởi tạo view ban đầu 
     func initView() {
         searchTextField.text = Core.shared.getKeyName()
         searchTextField.setOutlineColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0), for: .normal)
@@ -91,6 +94,7 @@ class SearchViewController: UIViewController {
         recentPetCollectionView.dataSource = recentPetDelegate
     }
     
+	// search action
     @IBAction func searchAct(_ sender: Any) {
         let key = searchTextField.text ?? ""
         
@@ -112,6 +116,7 @@ class SearchViewController: UIViewController {
     }
     
     // Add func act_ClearAll
+    // clear all history
     @IBAction func act_ClearAll(_ sender: Any) {
         Core.shared.clearSearchHistory()
         searchKeyHistory = Core.shared.getKeySearchHistory()
@@ -119,7 +124,9 @@ class SearchViewController: UIViewController {
         historyTableView.reloadData()
     }
     
+
 	// Add func act_ClearKey
+	// clear only history searchkey 
     @IBAction func act_ClearKey(_ sender: Any) {
         let button = sender as! UIButton
         
@@ -135,7 +142,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchKeyHistory.count
     }
-    
+
+    //Load history search
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryTableViewCell
         

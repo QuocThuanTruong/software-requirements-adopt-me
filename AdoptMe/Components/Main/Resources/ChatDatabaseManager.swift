@@ -2,7 +2,6 @@
 //  ChatDatabaseManager.swift
 //  AdoptMe
 //
-//  Created by Quoc Thuan Truong on 1/19/21.
 //
 
 import Foundation
@@ -752,7 +751,7 @@ extension ChatDatabaseManager {
 
         print("Deleting conversation with id: \(conversationId)")
 
-        // Get all conversations for current user
+        // Get all conversations for current user  
         // delete conversation in collection with target id
         // reset those conversations for the user in database
         let ref = database.child("\(safeEmail)/conversations")

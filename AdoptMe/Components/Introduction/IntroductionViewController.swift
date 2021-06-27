@@ -44,12 +44,14 @@ class IntroductionViewController: UIViewController {
 }
 
 extension IntroductionViewController: IntroductionDelegate {
+    //Func skip intro
     func skipIntroduce() {
         let destPage = viewControllers.count - 1
         viewPager.select(index: destPage)
         pageControl.currentPage = destPage
     }
-    
+
+    //Func next page
     func nextIntroduce() {
         pageControl.currentPage += 1
         viewPager.select(index: pageControl.currentPage)

@@ -2,7 +2,6 @@
 //  ChatTableViewCell.swift
 //  AdoptMe
 //
-//  Created by Quoc Thuan Truong on 1/9/21.
 //
 
 import UIKit
@@ -23,7 +22,6 @@ class ChatTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
