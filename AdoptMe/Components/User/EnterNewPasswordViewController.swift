@@ -111,7 +111,7 @@ class EnterNewPasswordViewController: UIViewController {
         
         
 }
-    
+    // check retype password
     func isSame(_ password: String, _ retype: String) -> Bool {
         return password == retype
     }
