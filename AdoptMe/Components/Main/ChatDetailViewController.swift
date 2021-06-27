@@ -160,6 +160,8 @@ class ChatDetailViewController: MessagesViewController {
            present(actionSheet, animated: true)
        }
 
+	// Add func presentLocationPicker
+
 	//Location picker
     private func presentLocationPicker() {
           let vc = LocationPickerViewController(coordinates: nil)

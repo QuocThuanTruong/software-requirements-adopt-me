@@ -193,6 +193,8 @@ class PetDetailViewController: UIViewController {
         }
     }
     
+
+	// Add func phoneAct
 	// add phone act into phoneButton
     @IBAction func phoneAct(_ sender: Any) {
         db.collection("users").document(pet.user_id).getDocument { (document, error) in
@@ -207,8 +209,11 @@ class PetDetailViewController: UIViewController {
             }
         }
     }
-    
+
+	// Add func addFavAct
+
     // Add pet to favorite
+
     @IBAction func addFavAct(_ sender: Any) {
         let favButton = sender as? UIButton
         

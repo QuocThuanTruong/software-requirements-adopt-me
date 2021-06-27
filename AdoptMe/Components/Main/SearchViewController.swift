@@ -40,6 +40,7 @@ class SearchViewController: UIViewController {
         })
     }
     
+	// Add func fetchData
     func fetchData() {
     //top 3 last added
         db.collection("pets")
@@ -114,6 +115,7 @@ class SearchViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // Add func act_ClearAll
     // clear all history
     @IBAction func act_ClearAll(_ sender: Any) {
         Core.shared.clearSearchHistory()
@@ -122,6 +124,8 @@ class SearchViewController: UIViewController {
         historyTableView.reloadData()
     }
     
+
+	// Add func act_ClearKey
 	// clear only history searchkey 
     @IBAction func act_ClearKey(_ sender: Any) {
         let button = sender as! UIButton
