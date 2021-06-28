@@ -56,6 +56,7 @@ class LoginViewController: UIViewController {
         passwordTextField.setFloatingLabelColor(UIColor(named: "AppSecondaryColor")!, for: .normal)
     }
     
+    // Login by username and password
     func loginManual() {
         Core.shared.setIsUserLogin(true)
         
@@ -139,6 +140,7 @@ class LoginViewController: UIViewController {
                 }
             }
     }
+
     // Login with facebook 
     @IBAction func loginWithFBAct(_ sender: Any) {
         let loginManager = LoginManager()
@@ -171,6 +173,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // Login with Google
     @IBAction func loginWithGGAct(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
     }
@@ -236,6 +239,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // Forgot password
     @IBAction func forgotPasswordAct(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ForgotPasswordViewController") as! ForgotPasswordViewController
         
@@ -243,6 +247,7 @@ class LoginViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    // Register
     @IBAction func registerAct(_ sender: Any) {
         let dest = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
         

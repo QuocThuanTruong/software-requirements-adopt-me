@@ -48,6 +48,7 @@ class OtherUserProfileViewController: UIViewController {
         fetchData()
     }
     
+	// fetch data from user 
     func fetchData() {
         db.collection("pets").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {

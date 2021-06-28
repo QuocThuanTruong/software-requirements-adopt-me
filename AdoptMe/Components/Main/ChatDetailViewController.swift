@@ -160,6 +160,9 @@ class ChatDetailViewController: MessagesViewController {
            present(actionSheet, animated: true)
        }
 
+	// Add func presentLocationPicker
+
+	//Location picker
     private func presentLocationPicker() {
           let vc = LocationPickerViewController(coordinates: nil)
         vc.modalPresentationStyle = .fullScreen
@@ -359,7 +362,6 @@ extension ChatDetailViewController: UIImagePickerControllerDelegate, UINavigatio
             let fileName = "photo_message_" + messageId.replacingOccurrences(of: " ", with: "-") + ".png"
 
             // Upload image
-
             StorageManager.shared.uploadMessagePhoto(with: imageData, fileName: fileName, completion: { [weak self] result in
                 guard let strongSelf = self else {
                     return

@@ -29,7 +29,7 @@ struct MyUser : Identifiable, Codable {
     var following = [String]()
     var followers = [String]()
 }
-
+// getUserByEmail 
 func getUserByEmail(Email : String) -> MyUser {
     var result = [MyUser]()
     

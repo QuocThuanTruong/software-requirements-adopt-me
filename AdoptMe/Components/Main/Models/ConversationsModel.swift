@@ -2,7 +2,7 @@
 //  ConversationsModel.swift
 //  AdoptMe
 //
-//  Created by Quoc Thuan Truong on 1/19/21.
+//  
 //
 
 import Foundation

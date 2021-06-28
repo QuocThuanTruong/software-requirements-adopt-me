@@ -86,6 +86,7 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    // Register
     @IBAction func registerAct(_ sender: Any) {
         // Do some thing before go to others screen
         checkCorrectForm()
@@ -111,6 +112,7 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    // Login
     @IBAction func loginAct(_ sender: Any) {
 //        let registerVC = self.presentingViewController
 //
@@ -128,6 +130,7 @@ class RegisterViewController: UIViewController {
         return password == retype
     }
     
+    // Chaeck password
     func isValidPassword(testStr:String?) -> Bool {
         guard testStr != nil else { return false }
      

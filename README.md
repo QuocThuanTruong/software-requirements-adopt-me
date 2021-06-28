@@ -35,8 +35,6 @@ For a pet owner, you can create a post for adoption with photos and information 
 | Triệu Mai Ngọc Thức  | 18120585 |     Member   |
 | Lê Thanh Tín         | 18120595 |     Member   |
 
-# Demo
-> ***https://youtu.be/W1DuCXef1Oo***
 
 # App introduction
 
