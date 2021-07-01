@@ -31,7 +31,6 @@ struct MyUser : Identifiable, Codable {
     var followers = [String]()
 }
 
-// get user by email 
 func getUserByEmail(Email : String) -> MyUser {
     var result = [MyUser]()
     
