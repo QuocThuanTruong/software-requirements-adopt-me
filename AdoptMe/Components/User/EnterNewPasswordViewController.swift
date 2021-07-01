@@ -116,6 +116,7 @@ class EnterNewPasswordViewController: UIViewController {
         return password == retype
     }
     
+	// check valid password 
     func isValidPassword(testStr:String?) -> Bool {
         guard testStr != nil else { return false }
      

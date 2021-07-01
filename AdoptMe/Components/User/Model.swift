@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 
 let db = Firestore.firestore()
 
+// user struct 
 struct MyUser : Identifiable, Codable {
     @DocumentID var id : String?
     var UID : String = ""
@@ -29,7 +30,7 @@ struct MyUser : Identifiable, Codable {
     var following = [String]()
     var followers = [String]()
 }
-// getUserByEmail 
+
 func getUserByEmail(Email : String) -> MyUser {
     var result = [MyUser]()
     
