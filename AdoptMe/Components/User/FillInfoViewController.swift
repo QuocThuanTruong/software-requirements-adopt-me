@@ -47,6 +47,7 @@ class FillInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Fix date format
         dateFormatter.dateFormat = "MMM dd, yyyy"
         
         genderPickerView = UIPickerView()
