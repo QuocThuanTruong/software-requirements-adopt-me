@@ -85,6 +85,7 @@ class Core {
         UserDefaults.standard.setValue(searchHistoryKey, forKey: "searchHistoryKey")
     }
     
+    //Fix not enough HistoryKeyArrLength
     func getKeySearchHistory() -> [String] {
         let searchHistoryKey = UserDefaults.standard.array(forKey: "searchHistoryKey") as? [String] ?? [String]()
         
