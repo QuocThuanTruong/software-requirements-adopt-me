@@ -82,7 +82,7 @@ class ForgotPasswordViewController: UIViewController {
         
         
     }
-    
+    // back action in forgot password screen 
     @IBAction func backAct(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
