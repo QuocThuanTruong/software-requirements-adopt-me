@@ -17,7 +17,7 @@ For a pet owner, you can create a post for adoption with photos and information 
 # Link videos
 
 > Introduction: https://www.youtube.com/watch?v=PW-RLdoRdyA
-> Demo how to use: https://www.youtube.com/watch?v=SCrm8JwmDQs
+<br/>Demo how to use: https://www.youtube.com/watch?v=SCrm8JwmDQs
 
 <br/>
 
